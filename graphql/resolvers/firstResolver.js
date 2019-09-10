@@ -1,11 +1,8 @@
-const db = require('../../config/config');
+
+const { hello2 } = require('../../services/sampleService');
+
 
 module.exports = {
-    hello2: () => {
-        db.raw('select * from persons').then((success) => {
-            console.log(success);
+    hello2: (obj, args, context) => hello2(context),
 
-            return success.rows;
-        });
-    },
 };

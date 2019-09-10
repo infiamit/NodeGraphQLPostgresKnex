@@ -5,7 +5,8 @@
   "scripts": {
     "predev": "eslint .",
     "start": "node ./bin/www",
-    "dev": "nodemon --exec npm start"
+    "dev": "nodemon --exec npm start",
+    "postbuild": "persistgraphql  query-whitelist.json"
   },
   "dependencies": {
     "apollo-server-express": "^2.9.2",
